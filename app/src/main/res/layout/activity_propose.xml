@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="me.changyuheng.proposeapp.ProposeActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <ImageView android:id="@+id/bottom_fullscreen_content"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/love_heart" />
+
+    <ImageView android:id="@+id/middle_fullscreen_content"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity = "center"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/white_square" />
+
+    <ImageView android:id="@+id/on_pressed_fullscreen_content"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:contentDescription="@string/empty"
+        android:visibility="invisible"
+        android:src="@drawable/love_heart_empty" />
+
+    <ImageView android:id="@+id/fullscreen_content"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/love_heart_empty_outer_shadowed" />
+</FrameLayout>
