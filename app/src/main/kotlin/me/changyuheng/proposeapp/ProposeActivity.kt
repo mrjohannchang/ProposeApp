@@ -5,12 +5,15 @@ import android.support.v4.app.FragmentActivity
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
-import android.util.DisplayMetrics
-import android.util.Log
-import android.view.MotionEvent
 
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import android.media.MediaPlayer
+import android.media.AudioManager
+
+
+
+
 
 
 
@@ -20,7 +23,6 @@ import com.daimajia.androidanimations.library.YoYo
  */
 class ProposeActivity : FragmentActivity() {
 
-    private var TAG = "ProposeActivity"
     private var mContentView: View? = null
     private var mOnPressedContentView: View? = null
     private var mMiddleContentView: View? = null
@@ -60,6 +62,9 @@ class ProposeActivity : FragmentActivity() {
                         YoYo.with(Techniques.Pulse).duration(700).playOn(mContentView!!)
                         YoYo.with(Techniques.Pulse).duration(700).playOn(mBottomContentView!!)
                         // TODO: make a request
+                        val mPlayer = MediaPlayer.create(this@ProposeActivity, R.raw.soundclip)
+                        mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                        mPlayer.start()
                     }
 
                     override fun onAnimationRepeat(p0: Animation?) {
